@@ -28,10 +28,11 @@ const loginController = async (req, res) => {
     res
       .cookie("token", token, {
         domain: "https://careerhelper.onrender.com",
-        expires: new Date(Date.now() + 86400000), // 1 day
-        httpOnly: true,
-        sameSite: "none",
-        secure: true,
+        expires: new Date(Date.now() + 864000000)
+        //, // 1 day
+        // httpOnly: true,
+        // sameSite: "none",
+        // secure: true,
       })
       .status(200)
       .json({
