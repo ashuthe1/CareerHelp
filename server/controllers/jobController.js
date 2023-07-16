@@ -17,32 +17,32 @@ const addJobController = async (req, res) => {
   
       console.log(token);
   
-      if (!token) {
-        return res.status(403).send({
-          success: false,
-          message: "Please login first",
-        });
-      }
+      // if (!token) {
+      //   return res.status(403).send({
+      //     success: false,
+      //     message: "Please login first",
+      //   });
+      // }
   
-      jwt.verify(token, process.env.JWT_SECRET, {}, async (err, info) => {
-        if (err) {
-          res.status(401).json("Not authorized");
-        }
+      // jwt.verify(token, process.env.JWT_SECRET, {}, async (err, info) => {
+      //   if (err) {
+      //     res.status(401).json("Not authorized");
+      //   }
   
         await jobModel.create({
           company,
           position,
           workLocation,
           locationType,
-          author: info.id,
+          author: "64b3d63e1791c5c08e3b35c8",
         });
   
         res.status(200).json({
           success: true,
           message: "Job added successfully",
         });
-      });
-    } catch (err) {
+      }
+    catch (err) {
       res.status(400).send({
         message: "Error in addJob controller",
         success: false,
