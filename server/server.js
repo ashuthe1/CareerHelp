@@ -4,8 +4,7 @@ require("dotenv").config();
 const cookieParser = require( "cookie-parser");
 
 const connectDB = require( "./database/connection");
-// const authRoute = require("./routes/authRoute");
-// const jobRoute = require( "./routes/jobRoute");
+const authRoute = require("./routes/authRoute");
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URL = process.env.MONGO_URL || "mongodb://0.0.0.0:27017/careerhelper";
