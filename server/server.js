@@ -16,7 +16,13 @@ connectDB(MONGO_URL);
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-
+app.use(
+    cors({
+      origin: ["https://careerhelper.vercel.app", "http://localhost:5173"],
+      methods: ["GET", "POST", "PATCH", "DELETE"],
+      credentials: true,
+    })
+);
 
 app.use(authRoute);
 app.use(userRoute);
