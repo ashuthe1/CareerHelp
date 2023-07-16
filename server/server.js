@@ -16,7 +16,7 @@ connectDB(MONGO_URL);
 
 app.use(
   cors({
-    origin: "https://careerhelp.vercel.app",
+    origin: ["https://careerhelp.vercel.app", "https://careerhelp.netlify.app", "http://localhost:5173"], // <-- location of the react app were connecting to
     methods: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true,
   })
