@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const logoutController = (req, res) => {
     try {
       res.clearCookie("token", {
-        domain: "job-portal-app-kzk0.onrender.com",
+        domain: "careerhelper.onrender.com",
         httpOnly: true,
         sameSite: "none",
         secure: true,
