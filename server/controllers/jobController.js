@@ -1,6 +1,6 @@
 const jobModel = require("../models/jobModel.js");
-const userModel = require("../models/userModel.model");
-import jwt from "jsonwebtoken";
+const userModel = require("../models/userModel");
+const jwt = require("jsonwebtoken");
 
 const addJobController = async (req, res) => {
     try {

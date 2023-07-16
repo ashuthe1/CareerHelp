@@ -1,5 +1,6 @@
-
-const User = require("../models/userModel.model");
+const jwt = require("jsonwebtoken");
+const User = require("../models/userModel");
+const bcrypt = require("bcryptjs");
 
 const logoutController = (req, res) => {
     try {
