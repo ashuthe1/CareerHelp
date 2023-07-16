@@ -16,7 +16,7 @@ connectDB(MONGO_URL);
 
 app.use(
   cors({
-    origin: "https://careerhelp.netlify.app",
+    origin: "https://careerhelp.vercel.app",
     methods: ["GET", "POST", "PATCH", "DELETE"],
     credentials: true,
   })
