@@ -43,7 +43,7 @@ const Login = () => {
           showMessage(true);
           setTimeout(() => {
             setRedirect(true);
-            window.location.href = "/";
+            window.location.href = "/jobs";
           }, 1000);
           break;
         case 401:
