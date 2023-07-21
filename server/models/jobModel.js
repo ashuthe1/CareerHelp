@@ -19,6 +19,20 @@ const jobSchema = new mongoose.Schema(
       type: String,
       default: "Remote",
     },
+    JobDescription: {
+      type : String,
+      default : "Job Description",
+      required : false
+    },
+    responsibilities:{
+      type : String,
+      default : "Responsibilities",
+      required : false
+    },
+    active: {
+      type : Boolean,
+      default : true
+    },
     author: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "user",
